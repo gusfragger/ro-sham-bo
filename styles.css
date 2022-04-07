@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Cute+Font&display=swap");
+
+body {
+  font-family: "Comfortaa", cursive;
+  background-color: #110d0d;
+}
+
+.header,
+.pc-title {
+  font-family: "Neonderthaw", cursive;
+  text-align: center;
+  font-size: 2.5rem;
+  animation: pulsate 1.5s infinite alternate;
+  color: #c07aac;
+  font-weight: bold;
+  text-shadow: 0 0 0.125em #bd11c6, 0 0 0.5em currentColor;
+}
+.user-selection {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.selection-button {
+  background-image: linear-gradient(45deg, #7c4499, #c07aac, #00b5b7);
+  height: 9rem;
+  width: 9rem;
+  cursor: pointer;
+  margin: auto;
+  padding: 0.25em 1em;
+  border-radius: 25%;
+  transition: all 0.7s linear;
+}
+
+.selection-button:focus {
+  outline: none;
+  -webkit-transform: scale(1.3);
+  transform: scale(1.1);
+  transition: all 0.3s;
+  box-shadow: 0 0 2em #bd11c6, 0 0 0.5em;
+}
+
+.output {
+  max-width: 700px;
+  margin: 3rem auto;
+  display: flex;
+  align-content: center;
+  transition: all 1s linear;
+}
+
+.pc-image {
+  width: 7rem;
+  height: 7rem;
+  padding: 0.25em 1em;
+  margin: 50px 50px 40px 50px;
+}
+.img-animation {
+  -webkit-transform: scale(0.1);
+  transform: scale(1.3);
+  transition: all 0.7s;
+}
+
+.pc-selection {
+  max-width: 375px;
+}
+
+.pc-title {
+  margin: 19px 0 -30px 19px;
+}
+
+.results {
+  justify-content: start;
+  font-family: "Comfortaa", cursive;
+  color: #bc13fe;
+  font-size: 1rem;
+  text-shadow: 0 0 0.125em rgb(240, 153, 240), 0 0 0.5em currentColor;
+  max-width: 450px;
+  margin: 2rem 2rem;
+  font-size: 20px;
+}
+
+.overlay {
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #110d0d;
+  opacity: 0.9;
+  position: absolute;
+  z-index: 1;
+}
+
+.restart-sign,
+.restart-btn {
+  font-family: "Neonderthaw", cursive;
+  text-align: center;
+  font-size: 5rem;
+  animation: pulsate 1.5s infinite alternate;
+  color: #c07aac;
+  font-weight: bold;
+  text-shadow: 0 0 0.125em #bd11c6, 0 0 0.5em currentColor;
+}
+
+.restart-btn {
+  text-decoration: none;
+  border: #bd11c6 4px solid;
+  font-size: 3rem;
+  padding: 0.25em 0.25em;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.45em, #bd11c6;
+  box-shadow: inset 0 0 0.5em 0 #bd11c6, 0 0 0.5em 0 #bd11c6;
+  cursor: pointer;
+  background: none;
+}
+
+.restart-btn::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: #bd11c6;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.45);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.restart-btn:hover,
+.restart-btn:focus {
+  background: #bd11c6;
+  color: #fff;
+  text-shadow: none;
+}
+.restart-btn:hover::before {
+  opacity: 1;
+}
+.restart-btn::after {
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em #bd11c6;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.restart-btn:hover::after {
+  opacity: 1;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  background-color: #5e5e5e;
+  text-align: center;
+  font-size: 15px;
+  color: #c07aac;
+  font-weight: bold;
+  text-shadow: 0 0 0.125em #bd11c6, 0 0 0.5em currentColor;
+}
+@keyframes pulsate {
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #bc13fe,
+      0 0 80px #bc13fe, 0 0 90px #bc13fe, 0 0 100px #bc13fe, 0 0 150px #bc13fe;
+  }
+  0% {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #bc13fe,
+      0 0 45px #bc13fe, 0 0 55px #bc13fe, 0 0 70px #bc13fe, 0 0 80px #bc13fe;
+  }
+}
+
+/* Responsive Layout */
+@media (max-width: 750px) {
+  .header {
+    font-size: 2rem;
+  }
+
+  .results {
+    font-size: 15px;
+  }
+  .pc-title {
+    margin: 10px auto;
+    font-size: 2rem;
+  }
+  .output {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .pc-selection {
+    margin: auto;
+  }
+
+  .pc-image {
+    width: 5rem;
+    height: 5rem;
+    padding: 0.25em 0.5em;
+    margin: auto;
+  }
+  .selection-button {
+    height: 6rem;
+    width: 6rem;
+    cursor: pointer;
+    margin: auto;
+    padding: 0.25em 0.5em;
+    border-radius: 25%;
+  }
+}

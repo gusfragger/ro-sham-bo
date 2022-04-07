@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>ro-sham-bo</h1>
+      </div>
+      <div class="user-selection">
+        <button class="selection-button rock-button" value="rock">
+          <img src=".\images\rock-01.svg" />
+        </button>
+        <button class="selection-button paper-button" value="paper">
+          <img src=".\images\paper-02.svg" />
+        </button>
+        <button class="selection-button scissors-button" value="scissors">
+          <img src=".\images\scissors-03.svg" />
+        </button>
+      </div>
+      <div class="output">
+        <div class="pc-selection centering">
+          <p class="pc-title">PC play</p>
+          <img src=".\images\question.svg" alt="pc image" class="pc-image" />
+        </div>
+        <div class="results">
+          <p class="round">Round : 0</p>
+          <p class="points">Your points: 0 | PC points: 0</p>
+          <p class="outcome-text"></p>
+        </div>
+      </div>
+      <div class="overlay">
+        <div class="newGame">
+          <div class="restart-sign"></div>
+          <button class="restart-btn">play again?</button>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>
+          Created with
+          <img src=".\images\heart.png" alt="pixel heart" class="heart" /> by
+          gusfragger
+        </p>
+      </footer>
+    </div>
+    <script src="app.js" defer></script>
+  </body>
+</html>
